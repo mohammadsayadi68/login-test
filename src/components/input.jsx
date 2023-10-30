@@ -15,4 +15,9 @@ const Input = (props) => {
     </section>
   );
 };
+Input.defaultProps = {
+  name:"input",
+  type: "text",
+  value:""
+};
 export default Input;

@@ -1,6 +1,6 @@
 import React from "react";
 import Input from "../../components/input";
-import Button from "../../components/formButton";
+import Button from "../../components/button";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 function Register() {

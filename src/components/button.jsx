@@ -1,6 +1,6 @@
 import React from "react";
 
-const Input = (props) => {
+const Button = (props) => {
   const{ value, type }=props
   return (
     <section className="mt-3">
@@ -8,4 +8,8 @@ const Input = (props) => {
     </section>
   );
 };
-export default Input;
+Button.defaultProps = {
+  type: "button",
+  value:"send"
+};
+export default Button;

@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import Input from "../../components/input";
-import Button from "../../components/formButton";
+import Button from "../../components/button";
 
 import { ToastContainer, toast } from "react-toastify";
 function Login() {
