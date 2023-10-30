@@ -19,11 +19,17 @@ function Login() {
 
   const handelLogin = (e) => {
     e.preventDefault();
-    const [loginUser] =  JSON.parse(localStorage.getItem("storeUser"));
-    if (userName === loginUser.user && pass === loginUser.pass) {
-      toast("you are logined success!!!!!");
+    if (localStorage.getItem("storeUser")) {
+      const [loginUser] = JSON.parse(localStorage.getItem("storeUser"));
+
+      if (userName === loginUser.user && pass === loginUser.pass) {
+        toast("you are logined success!!!!!");
+      } else {
+        toast("oppps your user or pass is wrong!!!!");
+      }
     } else {
-      toast("oppps your user or pass is wrong!!!!");
+      toast(" user not found !!!!!1");
+
     }
   };
   return (
@@ -31,18 +37,8 @@ function Login() {
       <ToastContainer />
       <form onSubmit={handelLogin} className="mt-5">
         <div className="mt-3">
-          <Input
-            name="user"
-            type="text"
-            value={userName}
-            onChange={onChange}
-          />
-          <Input
-            name="pass"
-            type="password"
-            value={pass}
-            onChange={onChange}
-          />
+          <Input name="user" type="text" value={userName} onChange={onChange} />
+          <Input name="pass" type="password" value={pass} onChange={onChange} />
         </div>
 
         <Button type="submit" value="login" />
