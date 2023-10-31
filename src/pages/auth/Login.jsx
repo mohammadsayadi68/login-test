@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import Input from "../../components/input";
 import Button from "../../components/button";
+import { useNavigate } from "react-router-dom";
 
 import { ToastContainer, toast } from "react-toastify";
 function Login() {
@@ -24,11 +25,13 @@ function Login() {
 
       if (userName === loginUser.user && pass === loginUser.pass) {
         toast("you are logined success!!!!!");
+    return navigate("/");
+
       } else {
-        toast("oppps your user or pass is wrong!!!!");
+        toast.error("oppps your user or pass is wrong!!!!");
       }
     } else {
-      toast(" user not found !!!!!1");
+      toast.error(" user not found !!!!!1");
 
     }
   };
