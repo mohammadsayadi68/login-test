@@ -5,8 +5,10 @@ import Button from "../../components/button";
 import { useNavigate } from "react-router-dom";
 
 import { ToastContainer, toast } from "react-toastify";
+
 function Login() {
   const [userName, setUserName] = useState("");
+  let navigate = useNavigate();
   const [pass, setPass] = useState("");
   const onChange = (e) => {
     const input = e.currentTarget;
