@@ -3,7 +3,7 @@ import Router from './router/router'
 import 'react-toastify/dist/ReactToastify.css';
 const App = () => {
   return (
-      <main className='container m-3'>
+      <main className='container'>
        <Router/>
       </main>
       

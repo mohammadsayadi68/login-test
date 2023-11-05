@@ -2,10 +2,10 @@ import React from "react";
 import Link from "../link";
 const Header = () => {
   return (
-    <section>
+    <header>
       <nav>
-        <ul>
-          <li>
+        <ul className="d-flex justify-content-between list-unstyled mt-2">
+          <li className="list-style-none">
             <Link href="/" value="Home" />
           </li>
           <li>
@@ -19,7 +19,7 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-    </section>
+    </header>
   );
 };
 
