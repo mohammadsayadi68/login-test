@@ -9,13 +9,16 @@ const Header = () => {
             <Link href="/" value="Home" />
           </li>
           <li>
+            <Link href="/tasks" value="tasks" />
+          </li>
+          <li>
             <Link href="/login" value="Login" />
           </li>
           <li>
-            <Link href="/logout" value="LogOut" />
+            <Link href="/register" value="Register" />
           </li>
           <li>
-            <Link href="/register" value="Register" />
+            <Link href="/logout" value="LogOut" />
           </li>
         </ul>
       </nav>

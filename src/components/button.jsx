@@ -1,15 +1,16 @@
 import React from "react";
 
 const Button = (props) => {
-  const{ value, type }=props
+  const{ value, type,className ,action}=props
   return (
-    <section className="mt-3">
-    <button className="btn btn-success" type={type}>{value}</button>
-    </section>
+    <button className={className} type={type} onClick={action}>{value}</button>
   );
 };
 Button.defaultProps = {
   type: "button",
-  value:"send"
+  value:"send",
+  className:'btn btn-success',
+  action:'default'
+
 };
 export default Button;

@@ -39,12 +39,12 @@ function Login() {
     if (result) {
       try {
         if (localStorage.getItem("user")) {
-          const loginUser = JSON.parse(localStorage.getItem("user"));
-          const filter = loginUser.filter(
+          const loginUser = JSON.parse(localStorage.getItem("user")).filter(
             (user) => user.user == userName && user.pass == pass
-          );
-          if (filter.length) {
-            localStorage.setItem("token", 'true');
+          );;
+          if (loginUser.length) {
+            const [auth]=loginUser
+            localStorage.setItem("authUser", JSON.stringify(auth));
             setUserName('');setPass('');
 
             toast("you are logined success!!!!!");
